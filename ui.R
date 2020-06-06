@@ -1,3 +1,20 @@
+# install required packages #
+
+installPackages <- function(x){
+  for(i in x){
+    if(i %in% rownames(installed.packages()) == FALSE) {
+      install.packages(i)
+          }
+  }
+}
+
+installPackages(c('flexdashboard', 'knitr', 'DT', 'rpivotTable', 'ggplot2','plotly',
+                  'dplyr','shinyHeatmaply','openintro','highcharter','ggvis','leaflet','sp',
+                  'ggthemes','gifski','reshape2','tidyverse','plyr','rgdal','readxl','mapview',
+                  'sf','googleVis','gganimate'))
+
+
+
 # example from http://shiny.rstudio.com/gallery/kmeans-example.html
 library(sp)
 library(leaflet)

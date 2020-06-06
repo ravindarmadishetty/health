@@ -11,7 +11,7 @@ installPackages <- function(x){
 installPackages(c('flexdashboard', 'knitr', 'DT', 'rpivotTable', 'ggplot2','plotly',
                   'dplyr','shinyHeatmaply','openintro','highcharter','ggvis','leaflet','sp',
                   'ggthemes','gifski','reshape2','tidyverse','plyr','rgdal','readxl','mapview',
-                  'sf','googleVis','gganimate'))
+                  'sf','googleVis','gganimate','shinythemes','shiny','dplyr','esquisse','tidyverse'))
 
 
 
@@ -27,7 +27,7 @@ library(esquisse)
 
 healthDf <- read_xlsx("C:/Users/31322/Desktop/disease/healthDf.xlsx")
 
-ui <- shinyUI(fluidPage(theme = shinytheme("united"),
+shinyUI(fluidPage(theme = shinytheme("united"),
                         titlePanel(HTML("<h1><center><font size=14> India Health care from 2013 to 2017</font></center></h1>")), 
                         sidebarLayout(
                           sidebarPanel(

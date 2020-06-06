@@ -1,15 +1,11 @@
-# install required packages #
-
-installPackages <- function(x){
-  for(i in x){
-    if(i %in% rownames(installed.packages()) == FALSE) {
-      install.packages(i)
-          }
-  }
+## Install R packages
+packages <- c('dplyr','leaflet','sp','tidyverse','readxl','shinythemes','shiny','dplyr','esquisse')
+install_if_missing <- function(p) {
+if (!p %in% rownames(installed.packages())) {
+install.packages(p)
 }
-
-installPackages(c('dplyr','leaflet','sp','tidyverse','readxl','shinythemes','shiny','dplyr','esquisse'))
-
+}
+invisible(sapply(packages, install_if_missing))
 
 
 # example from http://shiny.rstudio.com/gallery/kmeans-example.html

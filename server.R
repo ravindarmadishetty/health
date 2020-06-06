@@ -24,7 +24,7 @@ shinyServer(function(input, output, session) {
 
 })
 
-server <- shinyServer(function(input, output, session) {
+shinyServer(function(input, output, session) {
   
   selectedYear <- reactive({
     as.integer(input$yearInput)
